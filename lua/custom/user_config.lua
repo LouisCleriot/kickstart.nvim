@@ -1,5 +1,14 @@
 -- lua/custom/user_config.lua
-
+-- =============================================================================
+-- === Filetype Detection
+-- =============================================================================
+-- Force filetype for .ipynb files to trigger jupytext.nvim
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.ipynb',
+  callback = function()
+    vim.bo.filetype = 'ipynb'
+  end,
+})
 -- =============================================================================
 -- === Molten Output Chunk and Filetype-Specific Settings
 -- =============================================================================
