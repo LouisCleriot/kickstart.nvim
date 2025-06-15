@@ -968,6 +968,35 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      textobjects = {
+        move = {
+          enable = true,
+          set_jumps = true,
+          goto_next_start = {
+            [']b'] = { query = '@code_cell.inner', desc = 'Next code block' },
+          },
+          goto_previous_start = {
+            ['[b'] = { query = '@code_cell.inner', desc = 'Previous code block' },
+          },
+        },
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ['ib'] = { query = '@code_cell.inner', desc = 'in block' },
+            ['ab'] = { query = '@code_cell.outer', desc = 'around block' },
+          },
+        },
+        swap = {
+          enable = true,
+          swap_next = {
+            ['<leader>sbl'] = '@code_cell.outer',
+          },
+          swap_previous = {
+            ['<leader>sbh'] = '@code_cell.outer',
+          },
+        },
+      },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -1023,6 +1052,7 @@ require('lazy').setup({
     },
   },
 })
+require 'custom.user_config'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
