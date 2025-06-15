@@ -25,6 +25,7 @@ nbformat
 pillow
 debugpy
 ipykernel
+jupytext
 
 do after install of plugin 
 :UpdateRemotePluginsi
@@ -37,3 +38,5 @@ kitty terminal
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 ### install quarto using deb packaquage
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.31/quarto-1.7.31-linux-amd64.deb
+

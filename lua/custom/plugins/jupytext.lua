@@ -12,4 +12,5 @@ return {
       force_ft = 'markdown',
     }
   end,
+  lazy = false,
 }
