@@ -22,4 +22,7 @@ return {
       },
     },
   },
+  vim.keymap.set('n', '<C-b>', '<Cmd>Neotree toggle<Cr>'),
+  vim.keymap.set('n', '<leader>gs', '<Cmd>Neotree git_status<Cr>'),
+  vim.keymap.set('n', '<leader>ff', '<Cmd>Neotree focus filesystem<Cr>'),
 }
