@@ -1,5 +1,7 @@
 # list of package to install to use in vim 
 
+apt install fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
 npm install -g markdownlint-cli
 
 sudo apt install imagemagick
@@ -29,3 +31,9 @@ do after install of plugin
 
 ### molten startup 
 https://medium.com/@CompXBio/data-science-series-2-molten-nvim-transforms-neovim-into-a-jupyter-like-experience-a6435e6f2db7
+
+### other tool
+kitty terminal 
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
+### install quarto using deb packaquage
